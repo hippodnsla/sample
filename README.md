@@ -1,4 +1,0 @@
-sample
-======
-
-Sample Projects
