@@ -22,18 +22,24 @@
         <artifactId>spring-tx</artifactId>
         <version>${spring-framework.version}</version>
       </dependency>
-      <!-- Logging with SLF4J & LogBack -->
+      <!-- Logging -->
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
         <version>${slf4j.version}</version>
         <scope>compile</scope>
       </dependency>
-      <!-- Hibernate -->
+      <!-- ORM/JPA -->
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-entitymanager</artifactId>
         <version>${hibernate.version}</version>
+      </dependency>
+      <!-- CL Parser -->
+      <dependency>
+        <groupId>net.sourceforge.argparse4j</groupId>
+        <artifactId>argparse4j</artifactId>
+        <version>${argparse4j.version}</version>
       </dependency>
       <!-- Test Artifacts -->
       <dependency>
@@ -69,15 +75,17 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <!-- Spring -->
     <spring-framework.version>3.2.3.RELEASE</spring-framework.version>
-    <!-- Hibernate / JPA -->
+    <!-- ORM / JPA -->
     <hibernate.version>4.2.1.Final</hibernate.version>
+    <!-- CL Parser -->
+    <argparse4j.version>0.3.2</argparse4j.version>
     <!-- Logging -->
     <logback.version>1.0.13</logback.version>
     <slf4j.version>1.7.5</slf4j.version>
     <!-- Test -->
     <junit.version>4.11</junit.version>
-  <!-- NuStar Framework -->
-  <nustar-framework.version>0.0.1-SNAPSHOT</nustar-framework.version>
+    <!-- NuStar Framework -->
+    <nustar-framework.version>0.0.1-SNAPSHOT</nustar-framework.version>
   </properties>
   
   <modules>

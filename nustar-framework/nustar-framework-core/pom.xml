@@ -41,11 +41,6 @@
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>com.nustar.framework</groupId>
-      <artifactId>nustar-framework-infrastructure</artifactId>
-      <version>${project.version}</version>
-    </dependency>
   </dependencies>  
 
 </project>
