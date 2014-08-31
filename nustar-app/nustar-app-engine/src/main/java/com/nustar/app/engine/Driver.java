@@ -1,4 +1,4 @@
-package com.nustar.framework.infrastructure;
+package com.nustar.app.engine;
 
 public class Driver {
 	public static void main(String[] args) {
