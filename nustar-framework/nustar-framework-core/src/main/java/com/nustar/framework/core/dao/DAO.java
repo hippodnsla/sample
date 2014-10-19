@@ -2,61 +2,58 @@ package com.nustar.framework.core.dao;
 
 import java.util.List;
 
-public interface DAO<T> {
+import com.nustar.framework.core.entity.Entity;
+
+public interface DAO<E extends Entity> {
 
 	/**
-	 * 
+	 * Get entity from database where id been given
 	 * @param id
 	 * @return
 	 */
-	T get(long id);
+	E get(long id);
 	
 	/**
-	 * 
+	 * Get all entities from database
 	 * @return
 	 */
-	List<T> getAll();
+	List<E> getAll();
 	
 	/**
-	 * 
-	 * @param entity
+	 * Get entities from database where in range [begin, end)
+	 * @param begin
+	 * @param end
+	 * @return
 	 */
-	void save(T entity);
+	List<E> getRange(int begin, int end);
 	
 	/**
-	 * 
-	 * @param id
-	 * @param entity
+	 * Save or update entities to database
+	 * @param entities
 	 */
-	void save(long id, T entity);
+	void save(E... entities);
 	
 	/**
-	 * 
-	 * @param entity
+	 * Update entities from database
+	 * @param entities
 	 */
-	void update(T entity);
+	void update(E... entities);
 	
 	/**
-	 * 
-	 * @param id
-	 * @param entity
+	 * Delete entities in database
+	 * @param entities
 	 */
-	void update(long id, T entity);
+	void delete(E... entities);
 	
 	/**
-	 * 
-	 * @param entity
+	 * Check entities exist in database
+	 * @param entities
+	 * @return
 	 */
-	void delete(T entity);
+	boolean exist(E... entities);
 	
 	/**
-	 * 
-	 * @param id
-	 */
-	void delete(long id);
-	
-	/**
-	 * 
+	 * Check the number of entities in database
 	 * @return
 	 */
 	int size();

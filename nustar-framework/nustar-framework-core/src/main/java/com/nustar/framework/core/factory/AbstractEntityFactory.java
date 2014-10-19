@@ -4,33 +4,23 @@ import org.springframework.util.Assert;
 
 import com.nustar.framework.core.entity.Entity;
 
-public class ObjectFactory extends AbstractFactory {
+public abstract class AbstractEntityFactory {
 
-	private ObjectFactory() {
+	public AbstractEntityFactory() {
 		super();
 	}
 	
-	public static ObjectFactory getInstance() {
-		if (self == null)
-			self = new ObjectFactory();
-		return self;
-	}
-
-	@Override
-	public <T extends Entity> T create(Class<T> entityClazz) {
+	protected <E extends Entity> E create(Class<E> entityClazz)  {
 		
 		Assert.notNull(entityClazz);
 		
 		try {
-			T o = entityClazz.newInstance();
-			return o;
+			return entityClazz.newInstance();
 		} catch (InstantiationException e) {
 			throw new IllegalArgumentException("Invalid entity class name: " + e);
 		} catch (IllegalAccessException e) {
 			throw new IllegalArgumentException("Invalid entity class name: " + e);
 		}
 	}
-	
-	private static ObjectFactory self;
 
 }

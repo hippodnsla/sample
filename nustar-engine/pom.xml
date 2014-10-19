@@ -4,55 +4,73 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-  <parent>
-    <groupId>com.nustar.app</groupId>
-    <artifactId>nustar-app</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  </parent>
-  
-  <artifactId>nustar-app-engine</artifactId>
+  <groupId>com.nustar.engine</groupId>
+  <artifactId>nustar-engine</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   
   <dependencies>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
+      <version>${spring-framework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-tx</artifactId>
+      <version>${spring-framework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
       <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-entitymanager</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
+      <version>${spring-framework.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>net.sourceforge.argparse4j</groupId>
       <artifactId>argparse4j</artifactId>
+      <version>${argparse4j.version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.nustar.framework</groupId>
       <artifactId>nustar-framework-core</artifactId>
+      <version>${nustar-framework.version}</version>
     </dependency>
     <dependency>
       <groupId>com.nustar.framework</groupId>
       <artifactId>nustar-framework-infrastructure</artifactId>
+      <version>${nustar-framework.version}</version>
     </dependency>
   </dependencies>
+  
+  <properties>
+    <!-- Generic properties -->
+    <java.version>1.7</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <!-- Spring -->
+    <spring-framework.version>3.2.3.RELEASE</spring-framework.version>
+    <!-- CL Parser -->
+    <argparse4j.version>0.3.2</argparse4j.version>
+    <!-- Logging -->
+    <logback.version>1.0.13</logback.version>
+    <slf4j.version>1.7.5</slf4j.version>
+    <!-- Test -->
+    <junit.version>4.11</junit.version>
+    <!-- NuStar Framework -->
+    <nustar-framework.version>0.0.1-SNAPSHOT</nustar-framework.version>
+  </properties>
   
 </project>

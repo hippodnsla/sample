@@ -89,7 +89,7 @@
   </properties>
   
   <modules>
-    <module>nustar-app-engine</module>
+    <module>nustar-app-orient</module>
   </modules>
   
 </project>

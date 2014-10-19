@@ -29,7 +29,7 @@ public class TestObjectFactory {
 
 	@Before
 	public void setUp() throws Exception {
-		factory = ObjectFactory.getInstance();
+		factory = EntityFactory.getInstance();
 	}
 
 	@Test
@@ -42,9 +42,9 @@ public class TestObjectFactory {
 	@Test
 	public void testObjectFactory() {
 		assertNotNull(factory);
-		assertTrue(factory instanceof ObjectFactory);
-		assertEquals(factory, ObjectFactory.getInstance());
+		assertTrue(factory instanceof EntityFactory);
+		assertEquals(factory, EntityFactory.getInstance());
 	}
 
-	private ObjectFactory factory;
+	private EntityFactory factory;
 }
